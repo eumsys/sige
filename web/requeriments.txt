@@ -1,0 +1,8 @@
+Pillow
+django==2.0
+django-countries
+djangorestframework
+django-braces
+channels==1.1.8
+#from django_countries.fields import CountryField
+#python manage.py migrate --run-syncdb
