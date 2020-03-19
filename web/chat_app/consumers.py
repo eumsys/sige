@@ -6,11 +6,18 @@ def ws_add(message):
 	Group('chat').add(message.reply_channel)
 
 def ws_message(message):
-	print('Mensaje recibido: {}'.format(message))
+	'''
+	try:
+		print('Mensaje recibido: {}'.format(message))
+		#print(message.content['text'],type(message.content['text']))
+		#print('Mensaje recibido:{}'.format(message.content['text']))
+		#Group('chat').send({'text': message.content['text']})
+		Group('chat').send({'text': message})
+	except:
+		pass
+	'''
 	#print(message.content['text'],type(message.content['text']))
-	#print('Mensaje recibido:{}'.format(message.content['text']))
-	#Group('chat').send({'text': message.content['text']})
-	Group('chat').send({'text': message})
+	Group('chat').send({'text': message.content['text']})
 
 def ws_disconnect(message):
 	print('Conexión cerrada')
